@@ -1,0 +1,19 @@
+.vector /*Векторное изображение*/{
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	left: 30px;
+	top: 30px;
+}
+
+.vector__tick-right {
+	position: absolute;
+	right: 11.29px;
+	top: 18.35px;
+}
+
+.vector__tick-left {
+	position: absolute;
+	left: 11.29px;
+	top: 18.35px;
+}

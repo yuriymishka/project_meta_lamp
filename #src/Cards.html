@@ -1,0 +1,112 @@
+<div class="Cards">
+	<div class="vector"><!--Векторное изображение-->
+		<img src="/img/circle.svg" alt="there was some logo">
+		<img src="/img/tick-right.svg" class="vector__tick-right">
+		<img src="/img/tick-left.svg" class="vector__tick-left">
+	</div>
+	
+	<div class="content-box">
+		
+		<div class="room-searching">
+			<div class="room-searching__title">Найдём номера под ваши пожелания</div>
+			<div class="arrival">
+				<label class="arrival__label" for="arrival1" >Прибытие</label>
+				<div class="arrival__form">
+					<input type="date" id="arrival1" name="arrival">
+					<img src="/img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<div class="departure">
+				<label for="departure1" class="departure__label">Выезд</label>
+				<div class="departure__form">
+					<input type="date" id="departure1" name="departure">
+				<img src="/img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<div class="guests">
+				<label for="guests1" class="guests__label">Гости</label>
+				<div class="guests__form">
+					<input type="text" name="guests" id="guests1" value="Сколько гостей">
+					<img src="/img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<button class="selecting-the-room"> 
+				<span>Подобрать номер</span>
+				<img src="/img/arrow_forward.svg" alt="there would be some arrow">
+			</button>
+		</div>
+		
+		<div class="result-of-a-searcing">    <!--result-of-a-searching block-->
+			<div class="number-of-a-room">
+				<div class="number-of-a-room__number">№ <b>888</b><span>люкс</span></div>
+				 <div class="number-of-a-room__price">9 990₽ <em>в сутки</em></div>
+			</div>
+			<div class="arrival">
+				<label class="arrival__label" for="arrival2" >Прибытие</label>
+				<div class="arrival__form">
+					<input type="date" id="arrival2" name="arrival" value="2019-08-19">
+					<img src="../img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<div class="departure">
+				<label for="departure2" class="departure__label">Выезд</label>
+				<div class="departure__form">
+					<input type="date" id="departure2" name="departure" value="2019-08-23">
+				<img src="../img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<div class="guests">
+				<label for="guests2" class="guests__label">Гости</label>
+				<div class="guests__form">
+					<input type="text" name="guests" id="guests2" value="3 гостя">
+					<img src="../img/expand_more.svg" alt="there would be some pointer">
+				</div>
+			</div>
+			<table class="calculation-result">        <!-- table -->
+				<tr>
+					<td class="calculation-result__label">9 990₽ х 4 суток</td>
+					<td></td>
+					<td class="calculation-result__price">39 960₽</td>
+				</tr>
+				<tr>
+					<td class="calculation-result__label">Сбор за услуги: скидка 2 179₽</td>
+					<td class="calculation-result__info"><img src="../img/information.svg" alt="there would be some information pick"></td>
+					<td class="calculation-result__price">0₽</td>
+				</tr>
+				<tr>
+					<td class="calculation-result__label">Сбор за дополнительные услуги</td>
+					<td class="calculation-result__info"><img src="../img/information.svg" alt="there would be some information pick"></td>
+					<td class="calculation-result__price">300₽</td>
+				</tr>
+				<tr>
+					<td  colspan="2"><span></span><div class="calculation-result__label_bold">Итого</div></td>
+					<td class="calculation-result__price_bold">38 081₽</td>
+				</tr>
+			</table>
+			<button class="book-the-room">
+				<span>Забронировать</span>
+				<img src="../img/arrow_forward.svg" alt="there would be some arrow">
+			</button>
+		</div>
+		@@include("Calendar.html")	
+		<div class="registration">
+			<h1>Регистрация аккаунта</h1>
+			<div class="registration__name"><input type="text" value='Имя'></div>
+			<div class="registration__surname"><input type="text" value='Фамилия'></div>
+			<div class="registration__sex"></div>
+			<!-- <h2>Дата рождения</h2> -->
+			<div class="registration__date-of-birth"></div>
+			<div class="registration__log-in-data"></div>
+			<div class="registration__email"></div>
+			<div class="registration__password"></div>
+			<div class="registration__ad-permission"></div>
+			<div class="registration__pay-button"></div>
+			<div class="registration__toxin-account"></div>
+			<div class="registration__enter-button"></div>
+		</div>
+		<div class="logging-in"></div>
+		<div class="room-888"></div>
+		<div class="room-840"></div>
+		</div>
+	</div>
+</html>

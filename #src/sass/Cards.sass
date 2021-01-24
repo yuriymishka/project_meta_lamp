@@ -1,0 +1,405 @@
+//////////////////////////////////////////////style-reset
+@import style-reset.scss
+
+.Cards
+	position: relative
+
+	width: 1440px
+	height: 1350px
+	// top: 901px
+	// right: 90px
+
+	background: #F4F4F6
+	
+//import of a vector tick
+@import Vector.scss
+
+////////////////////////////////////////////////block of a room searching
+.room-searching 
+	position: absolute
+	width: 380px
+	height: 374px
+	left: 140px
+	top: 150px
+
+	background: #FFF
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+.room-searching__title
+	position: relative
+	width: 320px
+	height: 60px
+	left: 30px  
+	top: 40px
+	display: block
+
+	font-family: 'Quicksand', sans-serif
+	font-style: normal
+	font-weight: bold
+	font-size: 26px
+	line-height: 30px
+
+	color: #1F2041
+
+.arrival
+	position: relative
+	display: block
+	height: 64.44px
+	width: 150px
+	top: 60px
+	left: 30px
+
+///////////////////////////////////////////////*PATTERN FOR A LABEL*/
+%label 
+	width: 83px
+	height: 15px
+	margin-top: 0px 
+
+	font-family: Montserrat
+	font-style: normal
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	text-transform: uppercase
+
+	color: #1F2041
+ 
+//////////////////////////////////////////*PATTERN FOR A FORM*/
+%form
+	display: flex
+	position: relative
+	padding: 11.56px 0px 13.44px 12px
+	width: 150px
+	height: 44px
+	top: 5.44px
+
+	background: #FFFFFF
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	border-radius: 4px
+
+	& input
+		font-family: Montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		text-transform: uppercase
+		color: rgba(31, 32, 65, 0.75)
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-calendar-picker-indicator,
+		&::-webkit-clear-button
+			appearance: none
+			display: none
+		&:active::-ms-clear
+			display:none
+	& img
+		padding-left: 8px
+		padding-top: 2px
+
+.arrival__label
+	@extend %label
+
+.arrival__form
+	@extend %form
+
+.departure
+	position: relative
+	display: block
+	height: 64.44px
+	width: 150px
+	top: -4.44px
+	left: 200px
+
+.departure__label
+	@extend %label
+
+.departure__form
+	@extend %form
+
+.guests
+	position: relative
+	top: 16.2px
+	left: 30px
+	width: 320px
+	height: 64.56px
+
+.guests__label
+	@extend %label
+
+.guests__form
+	@extend %form
+
+	width: 320px
+	padding: 12.56px 0px 13.44px 15px
+
+	& input
+		width: 112px
+		margin-right: 159px
+		text-transform: none
+	& img
+		padding-left: 5px
+		padding-top: 0px
+
+//////////////////////////////////////////*pattern for a button*/
+%button 
+	position: relative
+	width: 320px
+	height: 44px
+	left: 30px
+	top: 46.56px
+
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+	border-radius: 22px
+	border: none
+
+	& span
+		position: absolute
+		top: 14px
+		left: 18px
+		width: 280px
+		height: 15px
+
+		font-family: Montserrat
+		font-style: normal
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+
+		text-align: center
+		text-transform: uppercase
+
+		color: #FFFFFF
+	& img
+		position: absolute
+		left: 290px
+		top: 12px
+
+.selecting-the-room 
+	@extend %button
+
+//////////////////////////////////////////result-of-a-searching block
+.result-of-a-searcing 
+	position: absolute
+	width: 380px
+	height: 511px
+	left: 560px
+	top: 150px
+
+	background: #FFFFFF
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+	& .arrival ///////////correcting the forms position
+		top: 58px
+	& .departure
+		top: -6.44px
+	& .guests
+		top: 13.2px
+
+.number-of-a-room ///////header
+	position: relative
+	top: 45px
+	left: 27px
+	height: 20px
+	width: 330px
+	margin-bottom: 13px
+	
+	& *
+		display: inline-block
+
+	.number-of-a-room__number 
+		font-family: Montserrat
+		font-style: normal
+		font-weight: 700
+		line-height: 17px
+		color: #1F2041
+		font-size: 14px
+
+	& b
+		font-size: 24px
+	& span
+		margin-right: 106px
+		font-family: Montserrat
+		font-style: normal
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+		text-transform: uppercase
+		color: #BC9CFF
+		
+	.number-of-a-room__price
+		font-family: Montserrat
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: rgba(31, 32, 65, 0.5)
+
+		& em
+			font-size: 12px
+			font-weight: 400
+			font-style: normal
+
+.calculation-result /////////////////////table
+	position: relative
+	top: 26.52px
+	left: 24px
+	border-spacing: 6px
+	font-family: Montserrat
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 18px
+	color: rgba(31, 32, 65, 0.75)
+	.calculation-result__label 
+		width: 216px
+	.calculation-result__price 
+		text-align: right
+	.calculation-result__label_bold,.calculation-result__price_bold
+		pl5px
+		font-family: Quicksand, sans-serif
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 24px
+		color: #1F2041
+	span
+		display: block
+		float: right
+		margin-top: 19px
+		width: 180px
+		height: 0.1px
+		border: 1px dashed rgba(31, 32, 65, 0.25)
+	& tr:nth-child(2)
+		vertical-align: middle
+	& tr:nth-child(3) 
+		vertical-align: top
+	& tr:nth-child(2) :first-child
+		padding: 10px 0px 8px
+		vertical-align: top
+	& tr:nth-child(3) :first-child
+		padding-bottom: 26px
+
+.book-the-room 
+	top: 42.56px
+	@extend %button
+
+////////////////////////////////////////calendar block
+.calendar
+	position: absolute
+	width: 320px
+	height: 369px
+	left: 980px
+	top: 150px
+
+	background: #FFFFFF
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	box-sizing: border-box
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+	border-radius: 4px
+
+
+
+      
+////////////////////////////////////////registration block
+
+%input__form                 ///////PATTERN FOR AN INPUT FORM
+	position: relative
+	top: 60px
+	left: 30px
+	width: 320px
+	height: 44px
+	border: 1px solid rgba(31, 32, 65, 0.25)
+	border-radius: 4px
+	
+	input
+		position: absolute
+		top: 13px
+		left: 15px
+
+		font-family: Montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: rgba(31, 32, 65, 0.75)
+
+.registration
+	position: absolute
+	width: 380px
+	height: 646px
+	left: 140px
+	top: 564px
+
+	background: #FFFFFF
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+	h1
+		position: relative
+		top: 40px
+		left: 30px
+
+		font-family: Montserrat
+		font-size: 24px
+		font-style: normal
+		font-weight: 700
+		line-height: 29px
+		letter-spacing: 0em
+		text-align: left
+		color: #1F2041
+
+	.registration__name
+		@extend %input__form 
+	
+	.registration__surname
+		@extend %input__form
+		top: 71px
+		
+
+////////////////////////////////////////////block of logging-in
+.logging-in
+	position: absolute
+	width: 380px
+	height: 358px
+	left: 560px
+	top: 701px
+
+	background: #FFFFFF
+	border: 1px solid rgba(0, 0, 0, 0.12)
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+
+/////////////////////////////////////////block of a room-888
+.room-888
+	position: absolute
+	width: 270px
+	height: 257px
+	left: 980px
+	top: 559.5px
+
+	background: #FFFFFF
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+	border-radius: 4px
+
+/////////////////////////////////////////block of a room-840
+.room-840
+	position: absolute
+	width: 270px
+	height: 257px
+	left: 980px
+	top: 856.5px
+
+	background: #FFFFFF
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+	border-radius: 4px
+
+
